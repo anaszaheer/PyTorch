@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 
-# data = [[1,2], [3, 4]]
+# data = [[1,2], [3, 4]] #2D tensor
 # x_data = torch.tensor(data)
 
 tensor = torch.rand(3, 4) #2D tensor, 3 rows and 4 columns
@@ -32,5 +32,7 @@ tensor[:,1] = 0
 
 #IN-PLACE OPERATIONS
 print(tensor, "\n")
-tensor.add_(5)
+tensor.add_(5) #adds 5 to all values in the tensor
 print(tensor)
+
+
