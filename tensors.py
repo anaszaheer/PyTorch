@@ -31,8 +31,25 @@ tensor[:,1] = 0
 # print(f"tensor.matmul(tensor.T) \n {tensor.matmul(tensor.T)} \n")
 
 #IN-PLACE OPERATIONS
-print(tensor, "\n")
-tensor.add_(5) #adds 5 to all values in the tensor
-print(tensor)
+# tensor.add_(5) #adds 5 to all values in the tensor
+# print(tensor)
 
+#TENSOR TO NumPy ARRAY
+t = torch.ones(5)
+# print(f"t: {t}")
+n = t.numpy()
+# print(f"n: {n}")
 
+# t.add_(1) #change in tensor reflects on the numpy as-well
+# print(f"t: {t}")
+# print(f"n: {n}")
+
+#NumPy ARRAY TO TENSOR
+n = np.ones(5)
+t = torch.from_numpy(n)
+# print(f"n: {n}")
+# print(f"t: {t}")
+
+np.add(n, 1, out=n) #change in numpy reflects on the tensor as-well
+print(f"n: {n}")
+print(f"t: {t}")
